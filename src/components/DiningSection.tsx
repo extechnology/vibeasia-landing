@@ -30,11 +30,11 @@ export const DiningSection = ({ onReserveTable }: DiningSectionProps) => {
         <div className="relative rounded-3xl overflow-hidden glass-card border border-[#d4af37]/30 shadow-2xl mb-12 group">
           <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
             {/* Image side */}
-            <div className="lg:col-span-7 relative min-h-[300px] overflow-hidden">
+            <div className="lg:col-span-7 relative min-h-[320px] overflow-hidden">
               <img
-                src="/images/dining.jpg"
-                alt="Romantic Cliffside Dining at Vibe Asia Wayanad"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                src="/images_real/img6.jpeg"
+                alt="Panoramic Observation Terrace Dining overlooking the Lake at Vibe Asia"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-transparent to-[#08140f] opacity-90" />
             </div>
@@ -91,8 +91,17 @@ export const DiningSection = ({ onReserveTable }: DiningSectionProps) => {
         {/* Secondary Dining Venues */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mist Lounge */}
-          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 glass-card-hover flex flex-col justify-between">
+          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 glass-card-hover flex flex-col justify-between overflow-hidden">
             <div>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-5">
+                <img
+                  src="/images_real/OD2.jpeg"
+                  alt="The Mist Lounge & High-Altitude Lake Bar"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08140f]/60 via-transparent to-transparent" />
+              </div>
+
               <div className="flex items-center space-x-2 text-xs uppercase tracking-widest text-[#d4af37] mb-2 font-medium">
                 <Coffee className="w-3.5 h-3.5" />
                 <span>High-Altitude Tea & Cocktail Bar</span>
@@ -117,25 +126,34 @@ export const DiningSection = ({ onReserveTable }: DiningSectionProps) => {
                 </span>
               </div>
             </div>
-            <div className="text-xs text-[#c5a880] font-medium">
+            <div className="text-xs text-[#c5a880] font-medium pt-2 border-t border-white/5">
               Open Daily: 11:00 AM – Midnight
             </div>
           </div>
 
           {/* Candlelit Plantation */}
-          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 glass-card-hover flex flex-col justify-between">
+          <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 glass-card-hover flex flex-col justify-between overflow-hidden">
             <div>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-5">
+                <img
+                  src="/images_real/img5_cropped.jpeg"
+                  alt="Lakeside Gazebo Private Candlelit Dining"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08140f]/60 via-transparent to-transparent" />
+              </div>
+
               <div className="flex items-center space-x-2 text-xs uppercase tracking-widest text-[#d4af37] mb-2 font-medium">
                 <Wine className="w-3.5 h-3.5" />
                 <span>Ultra-Private Romance</span>
               </div>
               <h4 className="font-serif text-2xl text-white font-medium mb-3">
-                Under The Canopy (Private Dining)
+                Lakeside Gazebo Candlelit Dinners
               </h4>
               <p className="text-sm text-[#bab0a0] font-light leading-relaxed mb-6">
-                An enchanting secluded table set deep within the spice grove, lit by hundreds of lanterns
-                and surrounded by ancient bamboo. A dedicated private chef prepares a personalized 5-course
-                gastronomic journey accompanied by fine champagne.
+                An enchanting secluded table set inside our traditional terracotta-tiled lakeside pagoda pavilion,
+                surrounded by yellow cassia blossoms and gentle water. A dedicated private chef prepares a personalized
+                5-course gastronomic journey accompanied by fine champagne.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 rounded-full bg-[#11271f] text-xs text-[#e8ded2]">
@@ -145,11 +163,11 @@ export const DiningSection = ({ onReserveTable }: DiningSectionProps) => {
                   5-Course Degustation Menu
                 </span>
                 <span className="px-3 py-1 rounded-full bg-[#11271f] text-xs text-[#e8ded2]">
-                  Live Flute Soloist (Optional)
+                  Traditional Water Pavilion
                 </span>
               </div>
             </div>
-            <div className="text-xs text-[#c5a880] font-medium">
+            <div className="text-xs text-[#c5a880] font-medium pt-2 border-t border-white/5">
               Requires 24-hour advance reservation
             </div>
           </div>

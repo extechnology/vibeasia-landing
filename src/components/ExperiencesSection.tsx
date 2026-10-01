@@ -28,9 +28,9 @@ export const ExperiencesSection = ({ onInquireExperience }: ExperiencesSectionPr
         <div className="relative rounded-3xl overflow-hidden glass-card border border-[#d4af37]/30 shadow-2xl mb-12 group">
           <div className="relative aspect-[21/9] min-h-[360px]">
             <img
-              src="/images/plantation-walk.jpg"
-              alt="Guided tea plantation walk at Vibe Asia Resort Wayanad"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="/images_real/OD5.jpeg"
+              alt="Panoramic Banasura Sagar lake and hillside estate at Vibe Asia"
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06100c] via-[#06100c]/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#06100c]/80 via-transparent to-transparent" />
@@ -40,17 +40,17 @@ export const ExperiencesSection = ({ onInquireExperience }: ExperiencesSectionPr
                 Signature Morning Ritual
               </span>
               <h3 className="font-serif text-2xl sm:text-4xl text-[#fbf9f5] font-medium mb-2">
-                The Heritage Tea & Cardamom Trail
+                The Heritage Lakeview & Plantation Trail
               </h3>
               <p className="text-xs sm:text-sm text-[#d4ccc0] font-light mb-4 line-clamp-2 sm:line-clamp-none">
-                Wander through rolling green hills wrapped in morning mist with our senior botanist.
-                Pluck tender tea leaves, learn the alchemy of spice curing, and savor freshly steeped estate tea.
+                Wander through rolling green hills overlooking Banasura Sagar lake with our resident naturalist.
+                Discover secret trails, learn the alchemy of spice curing, and savor freshly steeped estate tea with panoramic lake views.
               </p>
               <button
-                onClick={() => onInquireExperience("Heritage Tea & Cardamom Trail")}
+                onClick={() => onInquireExperience("Heritage Lakeview & Plantation Trail")}
                 className="px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider font-semibold text-[#08140f] bg-gradient-to-r from-[#e5c69f] via-[#d4af37] to-[#c5a880] hover:brightness-110 flex items-center space-x-2 cursor-pointer shadow-lg"
               >
-                <span>Reserve Morning Trail</span>
+                <span>Reserve Lakeview Trail</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

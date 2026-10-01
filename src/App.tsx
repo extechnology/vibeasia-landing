@@ -6,10 +6,12 @@ import { WellnessSection } from './components/WellnessSection';
 import { DiningSection } from './components/DiningSection';
 import { ExperiencesSection } from './components/ExperiencesSection';
 import { AmenitiesSection } from './components/AmenitiesSection';
+import { GallerySection } from './components/GallerySection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 export function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -71,6 +73,9 @@ export function App() {
         {/* Resort Amenities Bento Grid */}
         <AmenitiesSection />
 
+        {/* Visual Chronicles & Resort Gallery */}
+        <GallerySection />
+
         {/* Guest Chronicles / Testimonials */}
         <TestimonialsSection />
 
@@ -90,6 +95,9 @@ export function App() {
         initialCheckOut={bookingParams.checkOut}
         initialGuests={bookingParams.guests}
       />
+
+      {/* Floating WhatsApp Action Button */}
+      <WhatsAppButton />
     </div>
   );
 }

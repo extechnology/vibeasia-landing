@@ -36,9 +36,9 @@ export const WellnessSection = ({ onBookSpa }: WellnessSectionProps) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden glass-card border border-[#d4af37]/30 shadow-2xl aspect-[4/3] group">
               <img
-                src="/images/ayurveda-spa.jpg"
-                alt="Kerala Ayurvedic Spa Sanctuary at Vibe Asia"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                src="/images_real/img5_cropped.jpeg"
+                alt="Traditional lakeside Ayurvedic wellness pavilion at Vibe Asia"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06100c] via-transparent to-transparent opacity-70" />
 
@@ -50,7 +50,7 @@ export const WellnessSection = ({ onBookSpa }: WellnessSectionProps) => {
                       Authentic Panchakarma
                     </span>
                     <h4 className="font-serif text-lg text-white font-medium">
-                      Open-Air Forest Treatment Pavilions
+                      Open-Air Lakeside & Forest Pavilions
                     </h4>
                   </div>
                   <div className="text-right">

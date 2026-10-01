@@ -41,14 +41,14 @@ export const Hero = ({ onCheckAvailability }: HeroProps) => {
       {/* Background Image with Dark Vignette and Gradient Overlays */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero.jpg"
-          alt="Vibe Asia Resort Wayanad Infinity Pool"
-          className="w-full h-full object-cover object-center scale-105 animate-pulse duration-[10000ms]"
+          src="/images_real/OD1.jpeg"
+          alt="Vibe Asia Resort Wayanad Panoramic Banasura Sagar Lake & Western Ghats"
+          className="w-full h-full object-cover object-center scale-100 sm:scale-105 transition-transform duration-[8000ms] hover:scale-110"
         />
         {/* Multilayer gradient for optimal readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#08140f] via-[#08140f]/60 to-[#08140f]/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#08140f]/80 via-transparent to-[#08140f]/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#08140f]/40 to-[#08140f]/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#08140f]/35 to-[#08140f]/85" />
       </div>
 
       {/* Floating subtle glowing ambient particles */}
@@ -75,8 +75,8 @@ export const Hero = ({ onCheckAvailability }: HeroProps) => {
 
         {/* Subtitle */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-[#d4ccc0] font-light leading-relaxed mb-10">
-          Perched at 2,100 feet in Wayanad's Western Ghats. Private heated infinity pool villas,
-          rainforest treehouses, and ancient Ayurvedic healing amidst 40 acres of pristine tea gardens.
+          Perched at 2,100 feet in Wayanad's Western Ghats overlooking the tranquil waters of Banasura Sagar. Private lakeview balcony suites,
+          forest sanctuaries, and ancient Ayurvedic healing amidst panoramic hills.
         </p>
 
         {/* Interactive Reservation Bar */}

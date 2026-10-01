@@ -9,6 +9,7 @@ interface VillasSectionProps {
 export const VillasSection = ({ onReserveVilla }: VillasSectionProps) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedVillaDetail, setSelectedVillaDetail] = useState<Villa | null>(null);
+  const [activeModalImage, setActiveModalImage] = useState<string | null>(null);
 
   const categories = [
     { id: 'all', label: 'All Sanctuaries' },
@@ -138,7 +139,10 @@ export const VillasSection = ({ onReserveVilla }: VillasSectionProps) => {
                 {/* CTA Buttons */}
                 <div className="flex items-center space-x-3 pt-2">
                   <button
-                    onClick={() => setSelectedVillaDetail(villa)}
+                    onClick={() => {
+                      setSelectedVillaDetail(villa);
+                      setActiveModalImage(villa.image);
+                    }}
                     className="flex-1 py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-medium text-[#f5e3c3] border border-[#d4af37]/30 hover:border-[#d4af37] hover:bg-[#d4af37]/10 transition-all text-center cursor-pointer"
                   >
                     View Details
@@ -163,18 +167,21 @@ export const VillasSection = ({ onReserveVilla }: VillasSectionProps) => {
           <div className="glass-card max-w-2xl w-full rounded-3xl overflow-hidden border border-[#d4af37]/40 shadow-2xl relative max-h-[90vh] flex flex-col">
             {/* Close Button */}
             <button
-              onClick={() => setSelectedVillaDetail(null)}
+              onClick={() => {
+                setSelectedVillaDetail(null);
+                setActiveModalImage(null);
+              }}
               className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/60 text-white hover:text-[#d4af37] transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
             {/* Modal Image */}
-            <div className="relative aspect-[16/9] shrink-0">
+            <div className="relative aspect-[16/10] shrink-0">
               <img
-                src={selectedVillaDetail.image}
+                src={activeModalImage || selectedVillaDetail.image}
                 alt={selectedVillaDetail.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-opacity duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1c16] via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6">
@@ -186,6 +193,25 @@ export const VillasSection = ({ onReserveVilla }: VillasSectionProps) => {
                 </h3>
               </div>
             </div>
+
+            {/* Modal Image Thumbnails */}
+            {selectedVillaDetail.gallery && selectedVillaDetail.gallery.length > 1 && (
+              <div className="flex gap-2 p-3 bg-[#06120d] border-b border-white/10 overflow-x-auto">
+                {selectedVillaDetail.gallery.map((imgSrc, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveModalImage(imgSrc)}
+                    className={`relative w-20 h-14 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${
+                      (activeModalImage || selectedVillaDetail.image) === imgSrc
+                        ? 'border-[#d4af37] scale-105 shadow-md shadow-[#d4af37]/20'
+                        : 'border-transparent opacity-60 hover:opacity-100'
+                    }`}
+                  >
+                    <img src={imgSrc} alt="" className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
 
             {/* Modal Body */}
             <div className="p-6 sm:p-8 overflow-y-auto space-y-6">

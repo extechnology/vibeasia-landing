@@ -131,9 +131,17 @@ export const BookingModal = ({
                   <span className="text-[#8e8274]">Booking Reference:</span>
                   <span className="font-mono text-[#d4af37] font-bold">{bookingRef}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-[#8e8274]">Sanctuary:</span>
-                  <span className="text-white font-medium">{currentVilla.name}</span>
+                <div className="flex items-center space-x-3 border-b border-white/5 pb-2">
+                  <img
+                    src={currentVilla.image}
+                    alt={currentVilla.name}
+                    className="w-14 h-11 rounded-lg object-cover border border-white/10 shrink-0"
+                  />
+                  <div>
+                    <span className="text-[#8e8274] block text-[10px] uppercase tracking-wider">Reserved Sanctuary</span>
+                    <span className="text-white font-medium text-xs">{currentVilla.name}</span>
+                    <span className="text-[11px] text-[#c5a880] block">{currentVilla.size}</span>
+                  </div>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#8e8274]">Stay Dates:</span>
@@ -153,7 +161,7 @@ export const BookingModal = ({
 
               <div className="space-y-3 pt-2">
                 <a
-                  href={`https://wa.me/919447182900?text=Hello%20Vibe%20Asia%2C%20I%20have%20confirmed%20reservation%20${bookingRef}%20for%20${currentVilla.name}.`}
+                  href={`https://wa.me/918137965858?text=Hello%20Vibe%20Asia%2C%20I%20have%20confirmed%20reservation%20${bookingRef}%20for%20${currentVilla.name}.`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-semibold text-[#08140f] bg-[#25D366] hover:brightness-110 flex items-center justify-center space-x-2"
@@ -280,6 +288,35 @@ export const BookingModal = ({
                       <span className="text-[11px] text-[#c5a880] block">Complimentary</span>
                       <span className="text-xs text-white font-medium">Daily High-Altitude Breakfast</span>
                     </div>
+                  </div>
+                </div>
+
+                {/* Selected Villa Preview Card */}
+                <div className="mt-3 p-3.5 rounded-2xl bg-[#0a1c15] border border-[#d4af37]/20 flex items-center gap-4">
+                  <div className="w-20 h-14 rounded-xl overflow-hidden shrink-0 border border-white/10">
+                    <img
+                      src={currentVilla.image}
+                      alt={currentVilla.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold block">
+                      {currentVilla.category.replace('-', ' ')}
+                    </span>
+                    <h5 className="font-serif text-sm text-white font-medium truncate">
+                      {currentVilla.name}
+                    </h5>
+                    <p className="text-[11px] text-[#a09485] truncate">
+                      {currentVilla.size} • {currentVilla.occupancy} • {currentVilla.bed}
+                    </p>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <span className="text-[10px] text-[#8e8274] block">Nightly Rate</span>
+                    <strong className="font-serif text-sm sm:text-base text-[#f5e3c3]">
+                      ₹{currentVilla.pricePerNight.toLocaleString('en-IN')}
+                    </strong>
+                    <span className="text-[10px] text-[#8e8274] block">/ night</span>
                   </div>
                 </div>
               </div>

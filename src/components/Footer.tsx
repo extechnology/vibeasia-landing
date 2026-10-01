@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Compass, Send, Check } from 'lucide-react';
+import { MapPin, Phone, Mail, Compass, Send, Check, MessageCircle } from 'lucide-react';
 import { RESORT_DATA } from '../data/resortData';
 
 export const Footer = () => {
@@ -62,6 +62,15 @@ export const Footer = () => {
                 >
                   <Phone className="w-3.5 h-3.5 mr-1.5 text-[#d4af37]" />
                   <span>{RESORT_DATA.phone}</span>
+                </a>
+                <a
+                  href={`https://wa.me/918137965858?text=${encodeURIComponent('welcome to vibe asia  how can i help you')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:text-[#25D366] transition-colors"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 mr-1.5 text-[#25D366]" />
+                  <span>WhatsApp: +91 81379 65858</span>
                 </a>
                 <a
                   href={`mailto:${RESORT_DATA.email}`}
@@ -147,10 +156,11 @@ export const Footer = () => {
               Sanctuaries
             </h4>
             <ul className="space-y-2.5 text-xs text-[#cfc4b5]">
-              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Celestial Pool Villas</a></li>
-              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Canopy Treehouse Suites</a></li>
+              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Celestial Lakeview Villas</a></li>
+              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Canopy Ridge Forest Suites</a></li>
               <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Banasura Presidential Estate</a></li>
-              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Cardamom Garden Suites</a></li>
+              <li><a href="#villas" className="hover:text-[#d4af37] transition-colors">Cardamom Ridge Executive Suites</a></li>
+              <li><a href="#gallery" className="hover:text-[#d4af37] text-[#d4af37] transition-colors">Visual Gallery (13 Photos)</a></li>
             </ul>
           </div>
 
@@ -161,9 +171,9 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-[#cfc4b5]">
               <li><a href="#wellness" className="hover:text-[#d4af37] transition-colors">Veda Ayurvedic Spa</a></li>
-              <li><a href="#dining" className="hover:text-[#d4af37] transition-colors">Spice Valley Dining</a></li>
-              <li><a href="#experiences" className="hover:text-[#d4af37] transition-colors">Chembra Heart Lake Trek</a></li>
-              <li><a href="#experiences" className="hover:text-[#d4af37] transition-colors">Banasura Bamboo Safari</a></li>
+              <li><a href="#dining" className="hover:text-[#d4af37] transition-colors">Spice Valley Terrace Dining</a></li>
+              <li><a href="#experiences" className="hover:text-[#d4af37] transition-colors">Banasura Mountain Trail</a></li>
+              <li><a href="#experiences" className="hover:text-[#d4af37] transition-colors">Banasura Sagar Lake Safari</a></li>
             </ul>
           </div>
 

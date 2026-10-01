@@ -5,6 +5,7 @@ export interface Villa {
   tagline: string;
   description: string;
   image: string;
+  gallery?: string[];
   size: string;
   occupancy: string;
   bed: string;
@@ -61,7 +62,7 @@ export const RESORT_DATA = {
   elevation: "2,100 ft above sea level",
   temperature: "21°C • Misty Breeze",
   phone: "+91 4936 288 900",
-  whatsapp: "+91 9447 182 900",
+  whatsapp: "+91 81379 65858",
   email: "reservations@vibeasiawayanad.com",
   checkIn: "2:00 PM",
   checkOut: "11:00 AM",
@@ -69,82 +70,86 @@ export const RESORT_DATA = {
   villas: [
     {
       id: "celestial-pool-villa",
-      name: "The Celestial Infinity Pool Villa",
+      name: "The Celestial Lakeview Balcony Villa",
       category: "pool-villa",
-      tagline: "Panoramic mountain sunrise with private heated infinity plunge pool",
-      description: "Perched along the ridge, each Celestial Villa boasts a private temperature-controlled infinity pool that merges seamlessly with the misty valleys. Crafted with indigenous teak wood and Italian marble with floor-to-ceiling glass.",
-      image: "/images/pool-villa.jpg",
+      tagline: "Private balcony with uninterrupted lake & island vistas",
+      description: "Perched high above the water's edge, each Celestial Lakeview Villa features floor-to-ceiling panoramic glass doors opening directly onto a private viewing balcony. Relish morning mist drifting over the serene lake, handcrafted king bedding, plush lounge seating, and contemporary luxury.",
+      image: "/images_real/img4.jpeg",
+      gallery: ["/images_real/img4.jpeg", "/images_real/img6.jpeg", "/images_real/OD1.jpeg"],
       size: "1,450 sq.ft",
       occupancy: "2 Adults + 1 Child",
       bed: "Custom Emperor Teak Bed",
       features: [
-        "Private heated infinity pool (24ft)",
-        "Panoramic mist & tea estate view",
-        "Personal estate butler service",
-        "Outdoor stone rain shower & sun deck",
-        "Complimentary high-altitude tea bar"
+        "Private lake-facing panoramic balcony",
+        "Unobstructed Banasura Sagar island view",
+        "Floor-to-ceiling glass sliding doors",
+        "In-suite lounge area & modern entertainment",
+        "Complimentary high-altitude morning tea bar"
       ],
-      pricePerNight: 28500,
+      pricePerNight: 3500,
       highlightBadge: "Most Requested"
     },
     {
       id: "canopy-treehouse",
-      name: "Canopy Luxury Treehouse Pavilion",
+      name: "Canopy Ridge Forest Suite",
       category: "treehouse",
-      tagline: "Suspended 45 feet above ground in ancient rainforest canopy",
-      description: "An architectural marvel cradled by giant cedar and rosewood trees. Features an outdoor cedar hot tub, wrap-around timber balcony, and ambient forest acoustic acoustics for complete immersion in nature.",
-      image: "/images/treehouse.jpg",
+      tagline: "Modern stone-accented woodland retreat with bespoke comfort",
+      description: "A serene haven surrounded by lush rainforest flora. Features handcrafted natural stone feature walls, crisp white linens with rich burgundy silk accents, full silent climate control, leather lounge, and calming mood cove illumination.",
+      image: "/images_real/img3.jpeg",
+      gallery: ["/images_real/img3.jpeg", "/images_real/img1.jpeg", "/images_real/OD5.jpeg"],
       size: "1,150 sq.ft",
       occupancy: "2 Adults (Couples Sanctuary)",
-      bed: "Floating King Bed",
+      bed: "Floating Luxury King Bed",
       features: [
-        "Outdoor hydrotherapy heated jacuzzi",
-        "Bird's-eye valley & canopy vistas",
-        "Private timber cantilevered deck",
-        "Artisanal French press & Wayanad beans",
-        "Glass-enclosed luxury shower"
+        "Natural stone masonry feature wall",
+        "Full whisper-quiet AC & climate control",
+        "Leather sofa lounge & coffee nook",
+        "Atmospheric mood cove lighting",
+        "Glass-enclosed luxury rain shower"
       ],
-      pricePerNight: 24000,
+      pricePerNight: 3500,
       highlightBadge: "Honeymoon Favorite"
     },
     {
       id: "banasura-mansion",
-      name: "Banasura Two-Bedroom Presidential Mansion",
+      name: "Banasura Grand Lakefront Presidential Villa",
       category: "mansion",
-      tagline: "Ultra-private sprawling estate for families and dignitaries",
-      description: "Set on its own private spur with 360-degree vistas of Banasura peak and rolling tea gardens. Features a 38-foot private lap pool, dedicated chef's dining pavilion, private lawn, and dual master suites.",
-      image: "/images/hero.jpg",
+      tagline: "Ultra-luxurious lakeside residence with expansive panoramic balcony",
+      description: "Set on its own elevated vantage point with 360-degree vistas across Banasura Sagar lake and rolling green hills. Boasts an expansive master bedroom with wrap-around balcony doors, traditional timber window detailing, and majestic sunset views.",
+      image: "/images_real/img7.jpeg",
+      gallery: ["/images_real/img7.jpeg", "/images_real/OD2.jpeg", "/images_real/OD5.jpeg"],
       size: "2,850 sq.ft",
       occupancy: "4 Adults + 2 Children",
       bed: "Two Master Suites (2 King Beds)",
       features: [
-        "38-foot private infinity lap pool",
-        "Dedicated private chef on request",
-        "Private landscaped tea garden lawn",
-        "Bespoke cellar & mixologist service",
-        "Complimentary Calicut Airport chauffeur"
+        "Direct lakefront wrap-around balcony",
+        "Expansive master suite with silk furnishings",
+        "Dedicated estate butler & private dining",
+        "Panoramic sunset & island vistas",
+        "Complimentary airport chauffeur transfer"
       ],
-      pricePerNight: 54000,
+      pricePerNight: 3500,
       highlightBadge: "Signature Estate"
     },
     {
       id: "spice-plantation-suite",
-      name: "Cardamom Ridge Garden Suite",
+      name: "Cardamom Ridge Executive Suite",
       category: "suite",
-      tagline: "Ground-level haven bordered by fragrant cardamom and vanilla groves",
-      description: "Immerse yourself in botanical aromas. Featuring a private stone courtyard, deep sunken copper soaking bath, and direct pathway winding into the resort's 40-acre organic spice estate.",
-      image: "/images/ayurveda-spa.jpg",
+      tagline: "Spacious executive haven with stylish lounge & ambiance lighting",
+      description: "Bordered by fragrant botanical groves, this spacious suite features a generous seating lounge with modern leather couch, dark teak wardrobe, ambient blue ceiling lighting, and soothing plantation vistas.",
+      image: "/images_real/img2.jpeg",
+      gallery: ["/images_real/img2.jpeg", "/images_real/img8.jpeg", "/images_real/OD4.jpeg"],
       size: "950 sq.ft",
       occupancy: "2 Adults",
       bed: "Handcrafted Teak King Bed",
       features: [
-        "Private botanical stone courtyard",
-        "Hand-hammered copper soaking tub",
-        "Private patio with plantation vistas",
-        "Organic herbal bath rituals",
+        "Spacious in-room leather sofa lounge",
+        "Artisanal teak wardrobe with vanity mirror",
+        "Atmospheric multi-color mood ceiling lighting",
+        "Direct pathway into organic spice estate",
         "Fresh harvest tea ceremony daily"
       ],
-      pricePerNight: 19500
+      pricePerNight: 3500
     }
   ] as Villa[],
 
@@ -191,68 +196,68 @@ export const RESORT_DATA = {
     {
       id: "spice-valley",
       name: "Spice Valley",
-      type: "Cliffside Fine Dining & Malabar Gastronomy",
+      type: "Cliffside Terrace Dining & Malabar Gastronomy",
       hours: "Breakfast: 7:00 AM - 10:30 AM | Dinner: 7:00 PM - 11:00 PM",
-      description: "Perched high on the granite cliff, Spice Valley celebrates the centuries-old spice trade of Wayanad. Relish fresh catch from the Arabian Sea paired with hand-harvested black pepper, coconut milk, and fragrant tellicherry spices.",
-      highlights: ["Open-air starlit terrace", "Malabar Seafood Symphony", "Farm-to-fork organic ingredients", "Sommelier-curated international wines"],
-      image: "/images/dining.jpg"
+      description: "Perched high on the granite ridge, Spice Valley celebrates the centuries-old spice trade of Wayanad. Relish fresh catch paired with hand-harvested black pepper, coconut milk, and fragrant tellicherry spices while gazing out over the panoramic lake and islands.",
+      highlights: ["Open-air observation terrace", "Spectacular lake and island views", "Farm-to-fork organic ingredients", "Sommelier-curated international wines"],
+      image: "/images_real/img6.jpeg"
     },
     {
       id: "the-mist-lounge",
       name: "The Mist Lounge & High-Altitude Bar",
       type: "Artisanal Cocktails & Rare Estate Teas",
       hours: "11:00 AM - Midnight",
-      description: "Overlooking the infinity pool and sweeping Western Ghats valleys. Specializing in botanical cocktails infused with resort-grown lemongrass, star anise, wild honey, and afternoon high tea.",
-      highlights: ["Single-origin Wayanad coffee cupping", "Botanical mixology cocktails", "Sunset acoustic sessions", "Fireplace lounge"],
-      image: "/images/hero.jpg"
+      description: "Overlooking the panoramic resort grounds and sweeping Western Ghats lake waters. Specializing in botanical cocktails infused with resort-grown lemongrass, star anise, wild honey, and afternoon high tea.",
+      highlights: ["Elevated lake and island panorama", "Single-origin Wayanad coffee cupping", "Botanical mixology cocktails", "Sunset acoustic sessions"],
+      image: "/images_real/OD2.jpeg"
     },
     {
       id: "canopy-candlelight",
-      name: "Bespoke Plantation Candlelit Dinners",
+      name: "Lakeside Gazebo Candlelit Dinners",
       type: "Private Romantic Dining Experience",
       hours: "Available on Reservation (7:30 PM - 10:30 PM)",
-      description: "An intimate table set amidst the fragrant cardamom shrubs under a canopy of fairy lights and glowing lanterns. Features a personal chef and bespoke 5-course degustation menu.",
-      highlights: ["Dedicated private butler", "5-course tailor-made menu", "Champagne under the stars", "Acoustic instrumental music"],
-      image: "/images/dining.jpg"
+      description: "An intimate private table set inside our traditional terracotta-tiled lakeside pagoda pavilion, surrounded by yellow blossoms and gentle water. Features a personal chef and bespoke multi-course degustation menu.",
+      highlights: ["Dedicated private butler", "5-course tailor-made menu", "Traditional waterfront pagoda pavilion", "Champagne under the stars"],
+      image: "/images_real/img5_cropped.jpeg"
     }
   ] as DiningVenue[],
 
   experiences: [
     {
       id: "tea-estate-walk",
-      title: "Private Tea & Cardamom Trail",
+      title: "Heritage Lakeview & Plantation Trail",
       subtitle: "Guided by our Resident Naturalist",
       duration: "2 Hours • Morning",
-      description: "Wander through rolling green tea hills, pluck two leaves and a bud, uncover secret wild pepper vines, and conclude with an authentic sensory tea tasting session.",
-      image: "/images/plantation-walk.jpg",
+      description: "Wander through rolling green hills overlooking Banasura Sagar lake, learn the secrets of spice curing, discover wild pepper vines, and conclude with an authentic sensory tea tasting session.",
+      image: "/images_real/OD5.jpeg",
       tag: "Botanical Exploration"
     },
     {
       id: "chembra-peak-trek",
-      title: "Chembra Peak & Heart Lake Trek",
-      subtitle: "Highest Peak in Wayanad (2,100m)",
+      title: "Banasura Mountain & Island Trail",
+      subtitle: "Scenic Western Ghats Ridge (2,100m)",
       duration: "4.5 Hours • Early Morning",
       difficulty: "Moderate",
-      description: "Embark on an exhilarating sunrise trek through misty shola forests to reach the legendary perennial heart-shaped lake, surrounded by rare endemic orchids and mountain mist.",
-      image: "/images/hero.jpg",
+      description: "Embark on an exhilarating sunrise trek through misty shola forests to scenic ridges overlooking the emerald waters and islands of Banasura Sagar reservoir, surrounded by mountain mist.",
+      image: "/images_real/OD4.jpeg",
       tag: "Mountain Adventure"
     },
     {
       id: "bamboo-rafting",
-      title: "Banasura Bamboo Rafting",
+      title: "Banasura Sagar Lake Safari",
       subtitle: "Tranquil Waterway Safari",
       duration: "3 Hours • Sunset",
-      description: "Drift gently on handcrafted bamboo rafts across the calm blue waters of Banasura Sagar, taking in panoramic vistas of the Western Ghats mountain shadows.",
-      image: "/images/plantation-walk.jpg",
+      description: "Drift gently across the calm blue waters of Banasura Sagar lake, exploring hidden coves and taking in panoramic vistas of the Western Ghats mountain shadows.",
+      image: "/images_real/OD3.jpeg",
       tag: "Serene Wilderness"
     },
     {
       id: "night-campfire",
-      title: "Highland Campfire & Stargazing",
+      title: "Highland Campfire & Observation Deck",
       subtitle: "Under Western Ghats Constellations",
       duration: "Evening • 8:00 PM onwards",
-      description: "Gather around crackling cedar wood fires on the observation deck. Enjoy live acoustic melodies, roasted local chestnuts, and deep-sky telescope observations.",
-      image: "/images/dining.jpg",
+      description: "Gather around crackling cedar wood fires on the panoramic observation terrace. Enjoy live acoustic melodies, roasted local delicacies, and deep-sky stargazing over the peaceful lake.",
+      image: "/images_real/img6.jpeg",
       tag: "Evening Magic"
     }
   ] as Experience[],
